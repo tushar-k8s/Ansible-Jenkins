@@ -1,0 +1,13 @@
+
+- name: for CENTOS 
+  include_tasks: centos.yml
+  when: ansible_distribution == "CentOS"
+- name: for UBUNTU file
+  include_tasks: ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+- name: for RHEL 
+  include_tasks: rhel.yml
+  when: ansible_distribution == "RedHat"
+- name: for FEDORA file
+  include_tasks: fedora.yml
+  when: ansible_distribution == "Fedora"
